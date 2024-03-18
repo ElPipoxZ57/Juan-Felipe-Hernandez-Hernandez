@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}"></title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="contact.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul class="nav bg-dark">
+        <li class="nav-item">
+            <img th:src="@{/spring-img.png}" style="width:3em; padding:7px" class="px-auto">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/list">Docente</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/grupo">Grupos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/libro">Libros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/materia}">Materias</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contacto</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+        </li>
+    </ul>
+
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+                    <h2>Contact Us</h2>
+                    <h4>We would love to hear from you !</h4>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="fname">First Name:</label>
+                      <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="lname">Last Name:</label>
+                      <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="email">Email:</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="comment">Comment:</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">        
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
